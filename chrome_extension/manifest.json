@@ -1,0 +1,23 @@
+{
+    "manifest_version" : 2,
+
+    "name" : "洗手了沒",
+    "description" : "洗手了沒",
+    "version" : "1.0.0",
+
+    "icons": {
+        "128": "hand-128.png"
+    },
+	
+	"background": {
+		"scripts" : ["eventPage.js"],
+		"persistent" : false
+	},
+
+    "permissions" : [
+        "storage",
+        "notifications",
+		"alarms",
+        "background"
+    ]
+}
