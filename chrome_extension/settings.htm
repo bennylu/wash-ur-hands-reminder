@@ -1,0 +1,67 @@
+<!Doctype html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<script src="settings.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1.min.css">
+
+<style>
+    body {
+        width: 480px;
+    }
+
+    .title {
+        font-size: 18pt;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #div_reminders {
+        max-height: 260px;
+        overflow-y: auto;
+    }
+
+    .item {
+    }
+
+    .item:hover {
+        background: #eee;
+    }
+</style>
+
+<body>
+    <div id="div_reminders">
+        <table id="tb_reminders" class="table table-striped"></table>
+    </div>
+
+    <div class="card" style="margin: 10px">
+        <div class="card-body">
+            <label>每日提醒時間</label>
+            <div class="row mb-2">
+                <div class="col-3">
+                    <input id="hour" type="number" class="form-control" value="10" min="0" max="23" />
+                </div>
+                <div>時</div>
+                <div class="col-3">
+                    <input id="minute" type="number" class="form-control" value="0" min="0" max="59" />
+                </div>
+                <div>分</div>
+            </div>
+
+            <label>提醒內容</label>
+            <div class="mb-2">
+                <textarea id="text" class="form-control"></textarea>
+            </div>
+
+            <div id="btn-add" class="btn btn-success mb-2 float-right">新增提醒</div>
+        </div>
+    </div>
+</body>
+
+</html>

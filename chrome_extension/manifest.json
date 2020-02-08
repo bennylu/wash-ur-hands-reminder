@@ -8,9 +8,15 @@
     "icons": {
         "128": "hand-128.png"
     },
+
+    "browser_action" : {
+        "default_icon" : "hand-128.png",
+        "default_title" : "洗手了沒",
+        "default_popup" : "settings.htm"
+    },
 	
 	"background": {
-		"scripts" : ["eventPage.js"],
+		"scripts" : ["background.js"],
 		"persistent" : false
 	},
 
