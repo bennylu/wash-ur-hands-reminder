@@ -1,29 +1,27 @@
 {
-    "manifest_version" : 2,
-
-    "name" : "洗手了沒",
-    "description" : "洗手了沒",
-    "version" : "1.0.0",
-
+    "manifest_version": 2,
+    "name": "洗手了沒",
+    "description": "洗手了沒",
+    "version": "1.0.0",
     "icons": {
         "128": "hand-128.png"
     },
-
-    "browser_action" : {
-        "default_icon" : "hand-128.png",
-        "default_title" : "洗手了沒",
-        "default_popup" : "settings.htm"
+    "browser_action": {
+        "default_icon": "hand-128.png",
+        "default_title": "洗手了沒",
+        "default_popup": "settings.htm"
     },
-	
-	"background": {
-		"scripts" : ["background.js"],
-		"persistent" : false
-	},
-
-    "permissions" : [
+    "background": {
+        "scripts": [
+            "utils.js",
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
         "storage",
         "notifications",
-		"alarms",
+        "alarms",
         "background"
     ]
 }
