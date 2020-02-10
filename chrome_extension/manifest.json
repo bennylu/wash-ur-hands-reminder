@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "洗手了沒",
     "description": "洗手了沒",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "icons": {
         "128": "hand-128.png"
     },
