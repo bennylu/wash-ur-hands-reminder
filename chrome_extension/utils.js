@@ -6,14 +6,6 @@ getRemindersAsync = () => {
   });
 };
 
-setRemindersAsync = async reminders => {
-  return new Promise(resolve => {
-    chrome.storage.local.set(reminders, () => {
-      resolve();
-    });
-  });
-};
-
 addReminderAsync = async (hour, minute, text) => {
   return new Promise(resolve => {
     let pair = {};
@@ -44,6 +36,7 @@ scheduleReminders = async () => {
 
   let reminders = await getRemindersAsync();
   let names = Object.keys(reminders);
+  console.log(reminders);
 
   names.forEach(name => {
     let reminder = reminders[name];
@@ -51,7 +44,7 @@ scheduleReminders = async () => {
     reminderTime.setHours(reminder.hour, reminder.minute, 0, 0);
 
     let now = new Date();
-    if (reminderTime < now) {
+    if (reminderTime.getTime() < now.getTime()) {
       // see you tomorrow
       reminderTime.setDate(reminderTime.getDate() + 1);
     }

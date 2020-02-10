@@ -1,20 +1,6 @@
-chrome.runtime.onInstalled.addListener(() => {
-  let reminders = {
-    "reminder-1": {
-      hour: 10,
-      minute: 0,
-      text: "快起來動一動洗手上廁所！"
-    },
-    "reminder-2": {
-      hour: 15,
-      minute: 30,
-      text: "快起來動一動洗手上廁所！"
-    }
-  };
-
-  setRemindersAsync(reminders).then(() => {
-    scheduleReminders();
-  });
+chrome.runtime.onInstalled.addListener(async () => {
+  await addReminderAsync(10, 0, "快起來動一動洗手上廁所！");
+  await addReminderAsync(15, 30, "快起來動一動洗手上廁所！");
 });
 
 chrome.windows.onCreated.addListener(() => {
